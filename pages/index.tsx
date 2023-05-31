@@ -1,9 +1,23 @@
+import Header from "@/components/Header";
 import React from "react";
 
 function Home() {
     return (
         <div>
-            <h1 className="text-3xl font-bold underline">Hello world!</h1>
+            {/* Header  */}
+            <Header />
+
+            {/* hero */}
+
+            {/* about */}
+
+            {/* experience */}
+
+            {/* skills */}
+
+            {/* projects */}
+
+            {/* contact Me */}
         </div>
     );
 }
