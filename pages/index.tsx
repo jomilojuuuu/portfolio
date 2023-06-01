@@ -1,6 +1,5 @@
 import About from "@/components/About";
 import Contact from "@/components/Contact";
-import Experience from "@/components/Experience";
 import Header from "@/components/Header";
 import Hero from "@/components/Hero";
 import Project from "@/components/Project";
@@ -22,12 +21,8 @@ function Home() {
             <section id="about" className="snap-center">
                 <About />
             </section>
-            {/* experience */}
-            <section id="experience" className="snap-center">
-                <Experience />
-            </section>
             {/* skills */}
-            <section id="skills" className="snap-center">
+            <section id="skills" className="snap-start">
                 <Skills />
             </section>
             {/* projects */}
