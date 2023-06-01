@@ -1,6 +1,7 @@
 import React from 'react'
-import Card from './card'
+import Card from './Card'
 import { motion } from 'framer-motion'
+import skills from "@/data/skills.json"
 
 type Props = {}
 
@@ -15,7 +16,7 @@ function Skills({}: Props) {
             Skills
         </h3>
           
-        <div className='space-y-10 px-0 md:px-10 w-56 h-56 md:w-64 md:h-95 xl:w-[600px] xl:h-[400px]'>
+        <div className='space-y-10 py-20 px-0 md:px-10 w-56 h-56 md:w-64 md:h-95 xl:w-[600px] xl:h-[400px]'>
             <h4 className='text-4xl font-semibold text-gray-400'>
                 I work mostly with
                 <span className='text-white'> Frontend Technologies</span>
@@ -28,7 +29,7 @@ function Skills({}: Props) {
         initial={{
             x: 200,
             opacity: 0
-        }}
+        }}  
         transition={{
             duration: 1.2
         }}
@@ -37,16 +38,8 @@ function Skills({}: Props) {
             opacity: 1
         }}
         viewport={{ once: true }}
-        className='grid grid-cols-2 gap-5 w-56 h-56 md:w-64 md:h-95 xl:w-[600px] xl:h-[400px]'>
-            <Card />
-            <Card />
-            <Card />
-            <Card />
-            <Card />
-            <Card />
-            <Card />
-            <Card />
-            <Card />
+        className='grid grid-cols-2 gap-5 py-20 w-56 h-56 md:w-64 md:h-95 xl:w-[600px] xl:h-[400px]'>
+              {skills.map((skill, i)=>(<Card key={i} {...skill} />))}
         </motion.div> 
     </motion.div>
   )
