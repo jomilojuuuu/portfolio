@@ -16,14 +16,20 @@ function Skills({}: Props) {
             Skills
         </h3>
           
-        <div className='space-y-10 py-20 px-0 md:px-10 w-56 h-56 md:w-64 md:h-95 xl:w-[600px] xl:h-[400px]'>
-            <h4 className='text-4xl font-semibold text-gray-400'>
+        <div className='absolute top-[150px] space-y-5 md:space-y-10 py-20 px-0 md:px-10 w-56 h-56 md:w-64 md:h-95 xl:w-[600px] xl:h-[400px] -mt-11'>
+            <h4 className='text-2xl md:text-4xl -mt-9 font-semibold text-gray-400'>
                 I work mostly with
                 <span className='text-white'> Frontend Technologies</span>
             </h4>
-            <p className='text-2xl text-gray-400'>
-                Here are some of the <span className='text-white'>tools</span> i’ve worked with over the years, for my <span className='text-white'>personal, professional</span> and <span className='text-white'>open source</span> projects.
+            <p className='text-sm md:text-2xl text-gray-400'>
+                Here are some of the <span className='text-white'>tools</span> i’ve worked with over the years, for my
+                <span className='text-white'>personal, professional</span> and <span className='text-white'>open source</span> projects.
             </p>
+            <div className=''>
+                <a href="/assets/resume-73c297ea.pdf" target="_blank" download="resume" className="relative w-[160px] h-[48px] group text-center  px-6 py-3 font-bold">
+                    <span className=" border border-white p-3 text-[16px] text-center font-normal leading-[24px] relative">View Resumé</span>
+                </a>
+            </div>
         </div>
         <motion.div
         initial={{
@@ -38,7 +44,7 @@ function Skills({}: Props) {
             opacity: 1
         }}
         viewport={{ once: true }}
-        className='grid grid-cols-2 gap-5 py-20 w-56 h-56 md:w-64 md:h-95 xl:w-[600px] xl:h-[400px]'>
+        className='absolute mt-36 grid grid-cols-2 gap-3 md:grid-cols-2 md:gap-5 py-20 w-56 h-56 md:w-64 md:h-95 xl:w-[600px] xl:h-[400px]'>
               {skills.map((skill, i)=>(<Card key={i} {...skill} />))}
         </motion.div> 
     </motion.div>
