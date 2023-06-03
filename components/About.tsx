@@ -42,6 +42,11 @@ function About({}: Props) {
           I am motivated to find a role where I can challenge myself <span className='text-gray-100'>and provide value to website users. </span>
           I am excited to bring my knowledge and experience to a team and contribute to a company&apos;s success.
         </p>
+       <div className=''>
+            <a href="/assets/resume-73c297ea.pdf" target="_blank" download="resume" className="relative w-[160px] h-[48px] group text-center  px-6 py-3 font-bold">
+                <span className=" border border-white p-3 text-[16px] text-center font-normal leading-[24px] relative">View Resumé</span>
+            </a>
+        </div>
       </div>
     </motion.div>
   )
