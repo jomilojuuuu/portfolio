@@ -26,12 +26,12 @@ function Home() {
                 <Skills />
             </section>
             {/* projects */}
-            <section id="projects" className="snap-center">
+            <section id="projects" className="snap-start">
                 <Project />
             </section>
 
             {/* contact Me */}
-            <section id="contact" className="snap-center">
+            <section id="contact" className="snap-start">
                 <Contact />
             </section>
         </div>
