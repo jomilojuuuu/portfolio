@@ -14,3 +14,7 @@
         focus:text-[#F7AB0A]/40 hover:border-[#F7AB0A]/40
     }
 }
+
+body {
+    background-color: #181918;
+}

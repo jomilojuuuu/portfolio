@@ -3,7 +3,7 @@ import React from 'react'
 
 type Props = {}
 
-function About({}: Props) {
+function about({}: Props) {
   return (
     <motion.div 
           initial={{ opacity: 0 }}
@@ -47,10 +47,16 @@ function About({}: Props) {
                 <span className=" border border-white p-3 text-[16px] text-center font-normal leading-[24px] relative">View Resumé</span>
             </a>
         </div>
+
+      <div className=''>
+        <div className='w-[200px] h-1 bg-white m-2 inline'/><p className='inline'>book</p>
+        <div className='w-[200px] h-1 bg-white m-2 inline'/><p className='inline'>book</p>
+        <div className='w-[200px] h-1 bg-white m-2 inline'/><p className='inline'>book</p>
+      </div>
       </div>
     </motion.div>
   )
 }
 
-export default About
+export default about
 
