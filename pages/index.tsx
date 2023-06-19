@@ -1,4 +1,3 @@
-import About from "@/components/About";
 import Contact from "@/components/Contact";
 import Header from "@/components/Header";
 import Hero from "@/components/Hero";
@@ -12,9 +11,10 @@ function Home() {
             <Header />
 
             {/* hero */}
-            <section id="hero"  className="snap-start">
+            <section id="hero" className="snap-start">
                 <Hero />
             </section>
+
             {/* contact Me */}
             <section id="contact" className="snap-start">
                 <Contact />
