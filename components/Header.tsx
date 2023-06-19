@@ -3,6 +3,7 @@ import { useRouter } from "next/router";
 import { SocialIcon } from "react-social-icons";
 import Modal, { ModalHandle } from "./Modal";
 import React from "react";
+import Contact from "@/pages/contact";
 
 type Props = {};
 
@@ -56,8 +57,8 @@ function Header({}: Props) {
                     Open Modal
                 </button>
             </motion.div>
-            <Modal ref={modalRef} className="max-w-md">
-                <h1>Hello World</h1>
+            <Modal ref={modalRef} className="w-auto h-auto">
+                <Contact />
             </Modal>
         </header>
     );
