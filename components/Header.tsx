@@ -49,15 +49,17 @@ function Header({}: Props) {
                 }}
                 className="text-gray-300 cursor-pointer"
             >
-                <button onClick={() => router.push("/contact")}>
+                <button
+                    onClick={() => {
+                        modalRef.current?.open();
+                    }}
+                    className="text-white font-bold text-2xl z-10"
+                >
                     <SocialIcon className="cursor-pointer" fgColor="gray" bgColor="transparent" network="email" />
                     <p className="uppercase hidden md:inline-flex text-sm text-gray-400">Get In Touch</p>
                 </button>
-                <button onClick={() => modalRef.current?.open()} className="text-white font-bold text-2xl z-10">
-                    Open Modal
-                </button>
             </motion.div>
-            <Modal ref={modalRef} className="w-auto h-auto">
+            <Modal ref={modalRef} className="">
                 <Contact />
             </Modal>
         </header>

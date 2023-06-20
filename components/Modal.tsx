@@ -35,13 +35,15 @@ const Modal = React.forwardRef<ModalHandle, Props>(({ children, className, overl
     return (
         <ReactModal
             isOpen={isOpen}
+            shouldCloseOnEsc={true}
+            shouldCloseOnOverlayClick={true}
             onAfterOpen={() => console.log("Modal opened")}
             onRequestClose={() => {
-                console.log("Modal is trying to close");
+                setIsOpen(false);
             }}
             onAfterClose={() => console.log("Modal don close")}
             overlayClassName={["bg-black/50 fixed inset-0 z-50 flex items-center justify-center", overlayClassName].join(" ")}
-            className={["bg-white py-6 px-7 mx-5 md:mx-10 outline-none max-h-[90vh] overflow-y-auto rounded-lg", className].join(" ")}
+            className={["bg-white py-6 px-7 mx-5 md:mx-10 outline-none max-h-[90vh] overflow-y-auto rounded-lg ", className].join(" ")}
         >
             <div className="flex flex-col">
                 <button onClick={handleModalClose} title="Close" className="self-end">
