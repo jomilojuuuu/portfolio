@@ -43,9 +43,9 @@ const Modal = React.forwardRef<ModalHandle, Props>(({ children, className, overl
             }}
             onAfterClose={() => console.log("Modal don close")}
             overlayClassName={["bg-black/50 fixed inset-0 z-50 flex items-center justify-center", overlayClassName].join(" ")}
-            className={["bg-white py-6 px-7 mx-5 md:mx-10 outline-none max-h-[90vh] overflow-y-auto rounded-lg ", className].join(" ")}
+            className={["bg-[#323332] py-6 px-7 mx-5 md:mx-10 outline-none max-h-[90vh] overflow-y-auto rounded-lg", className].join(" ")}
         >
-            <div className="flex flex-col">
+            <div className="flex flex-col overflow-y-hidden overflow-x-hidden">
                 <button onClick={handleModalClose} title="Close" className="self-end">
                     <div className="relative">
                         <div className="w-5 h-0.5 bg-black rounded-full rotate-45 absolute"></div>
