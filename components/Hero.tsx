@@ -35,17 +35,17 @@ function Hero({ }: Props) {
         </h1>
 
         <div className='pt-7 grid gap-5 md:flex md:justify-between'>
-          <Link href="#about">
+          <Link href="/about">
             <button className='heroButton'>About</button>
           </Link>
-          <Link href="#experience">
-            <button className='heroButton'>Experience</button>
-          </Link>
-          <Link href="#skills">
+          <Link href="/skills">
             <button className='heroButton'>Skills</button>
           </Link>
-          <Link href="#projects ">
+          <Link href="/project">
             <button className='heroButton'>Projects</button>
+          </Link>
+          <Link href="/contact">
+            <button className='heroButton'>Contact</button>
           </Link>
         </div>
       </div>
