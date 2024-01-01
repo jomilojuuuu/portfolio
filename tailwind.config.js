@@ -4,5 +4,12 @@ module.exports = {
     theme: {
         extend: {}
     },
+<<<<<<< HEAD
     plugins: [require("tailwind-scrollbar")]
+=======
+    plugins: [
+        // ...
+        require("tailwind-scrollbar")
+    ]
+>>>>>>> b28984dbae57012e2f2e03a3463dfe8439fcb926
 };
