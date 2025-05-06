@@ -17,12 +17,7 @@ function Project({}: Props) {
                     useful. <span className="text-white">A few examples of these projects can be found on my</span> GitHub page, <span className="text-white">where you can also find other</span>{" "}
                     miscellaneous creations <span className="text-white">I have worked on.</span>
                 </p>
-                <div className="mt-10">
-                    <a href="https://github.com/jomilojuuuu" className=" px-4 py-3 bg-white hover:bg-gray-200 font-semibold">
-                        View Github
-                    </a>
-                </div>
-                <div className="mt-20 hidden md:inline-flex">
+                <div className="mt-20 md:inline-flex">
                     <Navigation />
                 </div>
             </div>
