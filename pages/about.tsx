@@ -1,4 +1,5 @@
 
+import Navigation from "@/components/Navigation";
 import { motion } from "framer-motion";
 import Link from "next/link";
 import React from "react";
@@ -19,45 +20,7 @@ function about({}: Props) {
                     <span className="text-gray-100"> user-friendly web experiences. </span>I am motivated to find a role where I can challenge myself{" "}
                     <span className="text-gray-100">and provide value to website users. </span>I am excited to bring my knowledge and experience to a team and contribute to a company&apos;s success.
                 </p>
-                <div className="">
-                    <a href="/assets/resume-73c297ea.pdf" target="_blank" download="resume" className="relative -ml-6 w-[160px] h-[48px] group text-center px-6 py-3 font-bold">
-                        <span className="border border-white p-3 text-[16px] text-center font-normal leading-[24px] relative">View Resumé</span>
-                    </a>
-                    <div className="mt-[70px]">
-                        <ul className="grid w-[200px] items-center space-y-4">
-                            <li>
-                                <Link className="flex items-center space-x-8" href="/">
-                                    <div className="h-[2px] w-16 bg-blue-200" />
-                                    <button className="text-white cursor-pointer lg:text-[16px] lg:leading-[20.42px] font-[700] mx-3 uppercase">HOME</button>
-                                </Link>
-                            </li>
-                            <li>
-                                <Link className="flex items-center space-x-8" href="/about">
-                                    <div className="h-[2px] w-16 bg-blue-200" />
-                                    <button className="text-white cursor-pointer lg:text-[16px] lg:leading-[20.42px] font-[700] mx-3 uppercase">ABOUT</button>
-                                </Link>
-                            </li>
-                            <li>
-                                <Link className="flex items-center space-x-8" href="/skills">
-                                    <div className="h-[2px] w-16 bg-blue-200" />
-                                    <button className="text-white cursor-pointer lg:text-[16px] lg:leading-[20.42px] font-[700] mx-3 uppercase">SKILLS</button>
-                                </Link>
-                            </li>
-                            <li>
-                                <Link className="flex items-center space-x-8" href="/project">
-                                    <div className="h-[2px] w-16 bg-blue-200" />
-                                    <button className="text-white cursor-pointer lg:text-[16px] lg:leading-[20.42px] font-[700] mx-3 uppercase">PROJECTS</button>
-                                </Link>
-                            </li>
-                            <li>
-                                <Link className="flex items-center space-x-8" href="/contact">
-                                    <div className="h-[2px] w-16 bg-blue-200" />
-                                    <button className="text-white cursor-pointer lg:text-[16px] lg:leading-[20.42px] font-[700] mx-3 uppercase">CONTACT</button>
-                                </Link>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
+                <Navigation />
             </div>
             <motion.img
                 initial={{
