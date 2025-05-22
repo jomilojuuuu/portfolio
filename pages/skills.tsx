@@ -15,7 +15,7 @@ function Skills({}: Props) {
             </div>
             <motion.div
                 className="flex flex-col relative h-screen text-center md:text-left md:-mt-32 
-                 md:flex-row max-w-7xl px-10 justify-evenly mx-auto items-center -mt-20"
+                 md:flex-row max-w-7xl px-5 justify-evenly mx-auto items-center -mt-20"
             >
                 <div className="space-y-5 md:space-y-8 py-20 px-0 md:px-10 w-56 h-56 md:w-64 md:h-95 xl:w-[600px] xl:h-[400px] -mt-[150px] md:-mt-11">
                     <h4 className="text-2xl md:text-3xl -mt-9 font-semibold text-gray-400">
@@ -26,7 +26,7 @@ function Skills({}: Props) {
                         Here are some of the <span className="text-white">tools</span> i’ve worked with over the years, for my <span className="text-white">personal, professional</span> and{" "}
                         <span className="text-white">open source</span> projects.
                     </p>
-                    <div className="">
+                    <div className="hidden md:block">
                         <Navigation />
                     </div>
                 </div>
@@ -50,6 +50,9 @@ function Skills({}: Props) {
                     ))}
                 </motion.div>
             </motion.div>
+            <div className="md:hidden flex justify-center">
+                <Navigation />
+            </div>
         </div>
     );
 }

@@ -9,7 +9,7 @@ import Contact from "@/pages/contact";
 
 type Props = {};
 
-function Header({}: Props) {
+function Header({ }: Props) {
     const router = useRouter();
     const modalRef = React.useRef<ModalHandle>(null);
     return (

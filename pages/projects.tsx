@@ -31,7 +31,7 @@ function Project({}: Props) {
                             <span className="text-gray-400"> GitHub page,</span> where you can also find other
                             <span className="text-gray-400"> miscellaneous creations </span>I have worked on.
                         </p>
-                        <div className="">
+                        <div className="hidden md:block">
                             <Navigation />
                         </div>
                     </div>
@@ -39,6 +39,9 @@ function Project({}: Props) {
                         {works.map((work, i) => (
                             <Work key={i} {...work} />
                         ))}
+                    </div>
+                    <div className="md:hidden flex justify-center">
+                        <Navigation />
                     </div>
                 </div>
             </div>

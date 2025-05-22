@@ -12,10 +12,9 @@ function Hero({ }: Props) {
     words: [
       "<Hi, The Name's Jomiloju/>",
       "<And I Loves To Code/>",
-      
     ],
     loop: true,
-    delaySpeed: 2000,
+    delaySpeed: 500,
  })
 
   return (
