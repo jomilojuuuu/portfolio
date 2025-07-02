@@ -11,14 +11,14 @@ type Props = {
 
 function Work({ name, image, description, tools }: Props) {
   return (
-    <div className="w-[300px] bg-black rounded shadow-lg h-[370px] mx-auto mt-5">
-      <div>
+    <div className="w-[350px] md:w-[350px] lg:w-[300px] bg-black rounded shadow-lg h-[380px] md:h-[400px] mx-auto mt-5">
+       <div className="w-full h-48 relative rounded-t-lg overflow-hidden">
         <Image
-          alt="profile pic"
+          alt={name}
           src={image}
-          className="relative mx-auto mt-2 w-40 h-40"
-          width={"40"}
-          height={"40"}
+          layout="fill"
+          objectFit="cover"
+          className="rounded-t-lg"
         />
       </div>
 
@@ -35,6 +35,7 @@ function Work({ name, image, description, tools }: Props) {
             <SocialIcon
               fgColor="gray"
               bgColor="transparent"
+
               url="https://github.com/jomilojuuuu"
             />
             <a className="text-gray-500" href="">
