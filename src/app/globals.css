@@ -7,7 +7,7 @@
 
 @layer components {
   .heroButton {
-    @apply px-6 py-2 border border-[#242424] rounded-full uppercase text-sm tracking-widest text-gray-500 transition-all hover:border-[#F7AB0A]/40 hover:text-[#F7AB0A]/40 cursor-pointer;
+    @apply px-6 py-2 border font-bold border-[#242424] rounded-full uppercase text-sm tracking-widest text-[#3B3C36] transition-all hover:border-[#F7AB0A]/40 hover:text-[#3B3C36]/40 cursor-pointer;
   }
 
   .contactInput {
@@ -16,7 +16,7 @@
 }
 
 body {
-  background-color: #181918;
+  background-color: #D3D3D3;
 }
 
 .ReactModal__Overlay {

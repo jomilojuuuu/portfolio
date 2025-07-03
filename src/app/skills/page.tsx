@@ -5,7 +5,8 @@ import { motion } from "framer-motion";
 import Header from "../../../components/Header";
 import Card from "../../../components/Card";
 import { getSkills } from "@/sanity/lib/queries";
-import Github from "../../../components/Github";
+import VerticalSidebar from "../../../components/VerticalSidebar";
+import Resume from "../../../components/Resume";
 
 type Skill = {
   name: string;
@@ -36,22 +37,23 @@ function Skills() {
   return (
     <div>
       <Header />
+      <VerticalSidebar />
       <motion.div className="flex flex-col h-screen text-center lg:text-left lg:-mt-40 lg:flex-row px-5 justify-evenly items-center -mt-15">
         <div className="space-y-5 lg:space-y-8 py-20 lg:px-10 md:w-[60%] lg:w-64 lg:h-95 xl:w-[600px] xl:h-[400px] -mt-[20px] lg:-mt-25">
           <h4 className="text-3xl lg:text-5xl font-semibold text-gray-400 lg:mt-20 lg:w-[90%]">
             I work mostly with
-            <span className="text-white"> Frontend Technologies</span>
+            <span className="text-[#555555]"> Frontend Technologies</span>
           </h4>
           <p className="text-lg lg:text-xl text-gray-400">
-            Here are some of the <span className="text-white">tools</span> I’ve
+            Here are some of the <span className="text-[#555555]">tools</span> I’ve
             worked with over the years, for my{" "}
-            <span className="text-white">personal, professional</span> and{" "}
-            <span className="text-white">open source</span> projects.My{" "}
+            <span className="text-[#555555]">personal, professional</span> and{" "}
+            <span className="text-[#555555]">open source</span> projects.My{" "}
             <span>soft skills</span> have also contributed majorly to my{" "}
-            <span className="text-white">growth</span>
-            and abilities <span className="text-white">professionally</span>.
+            <span className="text-[#555555]">growth</span>
+            and abilities <span className="text-[#555555]">professionally</span>.
           </p>
-          <Github />
+          <Resume />
         </div>
 
         <motion.div

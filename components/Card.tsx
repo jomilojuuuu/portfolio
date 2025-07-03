@@ -9,7 +9,7 @@ type Props = {
 
 function Card({ name, image }: Props) {
   return (
-    <div className="w-[160px] h-[70px] md:w-[200px] md:h-[80px] mt-3 bg-[#1e1e1e] flex justify-center items-center hover:scale-95 shadow-md transition-all duration-300">
+    <div className="w-[160px] h-[70px] md:w-[200px] md:h-[80px] mt-3 bg-gray-400 flex justify-center items-center hover:scale-95 shadow-md transition-all duration-300">
       <span className="flex gap-[16px] w-[101px]">
         {image ? (
           <span className="w-[35px] h-[35px] relative">

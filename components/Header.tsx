@@ -24,7 +24,7 @@ function Header() {
   };
 
   return (
-    <header className="sticky top-0 p-5 flex items-start justify-between max-w-7xl mx-auto z-20 xl:items-center bg-inherit">
+    <header className="mb-2 top-0 p-5 flex items-start justify-between max-w-7xl mx-auto z-20 xl:items-center bg-inherit">
       <motion.div
         initial={{ x: -500, opacity: 0, scale: 0.5 }}
         animate={{ x: 0, opacity: 1, scale: 1 }}
@@ -70,9 +70,9 @@ function Header() {
             </p>
           </button>
           <div>
-            <AlignRight onClick={handelClick} className="lg:hidden" />
+            <AlignRight onClick={handelClick} className="lg:hidden text-gray-500" />
             {isOpen && (
-              <div className="fixed top-0 right-0 h-full w-[300px] bg-gray-900 text-white z-50 shadow-lg p-6">
+              <div className="fixed top-0 right-0 h-full w-[300px] bg-gray-500 text-white z-50 shadow-lg p-6">
                 <button onClick={handelClick} className="self-end mt-5">
                   <X className="h-7 w-7 text-gray-400" />
                 </button>

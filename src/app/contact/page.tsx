@@ -3,6 +3,7 @@
 import React from "react";
 import { useForm, SubmitHandler } from "react-hook-form";
 import Header from "../../../components/Header";
+import VerticalSidebar from "../../../components/VerticalSidebar";
 type Input = {
   name: string;
   subject: string;
@@ -18,6 +19,7 @@ function Contact() {
   return (
     <div>
       <Header />
+      <VerticalSidebar />
       <div className="h-screen relative flex flex-col md:text-left md:flex-row max-w-7xl -my-[100px] justify-evenly mx-auto items-center">
         <div className="flex flex-col space-y-5">
           <h4 className="text-4xl md:text-5xl font-semibold text-center mt-16">

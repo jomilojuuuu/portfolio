@@ -4,7 +4,7 @@ import Navbar from "../../components/Navbar";
 
 function Home() {
   return (
-    <div className="bg-[#181918] text-white h-screen snap-y snap-mandatory overflow-scroll z-0 overflow-x-hidden">
+    <div className="bg-[#D3D3D3] text-white h-screen snap-y snap-mandatory overflow-scroll z-0 overflow-x-hidden">
       {/* Header  */}
       <Navbar />
       {/* hero */}

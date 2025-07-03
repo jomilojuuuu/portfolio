@@ -2,19 +2,19 @@
 
 import { motion } from "framer-motion";
 import Header from "../../../components/Header";
+import VerticalSidebar from "../../../components/VerticalSidebar";
 
 export default function About() {
   return (
-    <div className="min-h-screen bg-[#0a0a0a] text-white">
+    <div className="min-h-screen bg-[#D3D3D3] text-[#3B3C36]">
       <Header />
-
+      <VerticalSidebar />
       <motion.section
         initial={{ opacity: 0 }}
         whileInView={{ opacity: 1 }}
         transition={{ duration: 1.2 }}
         className="max-w-6xl mx-auto px-6 py-16 flex flex-col md:flex-row items-center gap-10"
       >
-        {/* Profile Image */}
         <motion.img
           initial={{ x: -100, opacity: 0 }}
           whileInView={{ x: 0, opacity: 1 }}
@@ -25,15 +25,16 @@ export default function About() {
           className="w-48 h-48 md:w-72 md:h-72 xl:w-[400px] xl:h-[400px] object-cover rounded-full md:rounded-lg shadow-lg"
         />
 
-        
         <div className="flex-1 text-center md:text-left space-y-6">
-          <h2 className="text-4xl font-bold text-white">
-            About <span className="text-[#FACC15]">Me</span>
+          <h2 className="text-4xl font-bold text-[##555555]">
+            About <span className="text-gray-400 ">Me</span>
           </h2>
 
-          <p className="text-lg text-gray-300 leading-relaxed">
+          <p className="text-lg text-[#555555] leading-relaxed">
             I’m a passionate{" "}
-            <span className="text-white font-semibold">frontend developer</span>{" "}
+            <span className="text-gray-400  font-semibold">
+              frontend developer
+            </span>{" "}
             with a love for crafting beautiful, responsive websites and
             intuitive user interfaces. I thrive in environments where I can
             grow, learn, and contribute to real-world projects that solve
