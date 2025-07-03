@@ -3,7 +3,6 @@
 import React from "react";
 import { useForm, SubmitHandler } from "react-hook-form";
 import Header from "../../../components/Header";
-import Navigation from "../../../components/Navigation";
 type Input = {
   name: string;
   subject: string;
@@ -66,9 +65,7 @@ function Contact() {
           </button>
         </form>
       </div>
-      <div className="flex justify-center py-5">
-        <Navigation />
-      </div>
+      
     </div>
   );
 }

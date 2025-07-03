@@ -2,45 +2,51 @@
 
 import { motion } from "framer-motion";
 import Header from "../../../components/Header";
-import Navigation from "../../../components/Navigation";
 
 export default function About() {
   return (
-    <div>
+    <div className="min-h-screen bg-[#0a0a0a] text-white">
       <Header />
 
-      <motion.div
+      <motion.section
         initial={{ opacity: 0 }}
         whileInView={{ opacity: 1 }}
-        transition={{ duration: 1.5 }}
-        className="flex flex-col relative h-screen text-center md:text-left md:flex-row max-w-7xl px-5 py-16 justify-evenly mx-auto items-center"
+        transition={{ duration: 1.2 }}
+        className="max-w-6xl mx-auto px-6 py-16 flex flex-col md:flex-row items-center gap-10"
       >
+        {/* Profile Image */}
         <motion.img
-          initial={{ y: -200, opacity: 0 }}
-          whileInView={{ x: 0, y: -70, opacity: 1 }}
+          initial={{ x: -100, opacity: 0 }}
+          whileInView={{ x: 0, opacity: 1 }}
           transition={{ duration: 1.2 }}
           viewport={{ once: true }}
           src="/banner.png"
-          alt="profile pic"
-          className="-mb-20 md:mb-0 flex-shrink-0 w-40 h-40 mt-10 rounded-full object-cover md:w-[280px] md:rounded-lg md:h-[250px] xl:w-[600px] xl:h-[400px]"
+          alt="Profile picture"
+          className="w-48 h-48 md:w-72 md:h-72 xl:w-[400px] xl:h-[400px] object-cover rounded-full md:rounded-lg shadow-lg"
         />
 
-        <div className="space-y-10 pt-10 md:pt-1 pb-0 md:px-10">
-          <p className="text-xl md:text-2xl text-gray-400">
-            I am a <span className="text-gray-100">frontend developer</span>. I
-            have a strong background in creating visually appealing&nbsp;
-            <span className="text-gray-100">
-              user‑friendly web experiences.
-            </span>{" "}
-            I’m motivated to find a role where I can challenge myself&nbsp;
-            <span className="text-gray-100">and provide value to users.</span>
+        
+        <div className="flex-1 text-center md:text-left space-y-6">
+          <h2 className="text-4xl font-bold text-white">
+            About <span className="text-[#FACC15]">Me</span>
+          </h2>
+
+          <p className="text-lg text-gray-300 leading-relaxed">
+            I’m a passionate{" "}
+            <span className="text-white font-semibold">frontend developer</span>{" "}
+            with a love for crafting beautiful, responsive websites and
+            intuitive user interfaces. I thrive in environments where I can
+            grow, learn, and contribute to real-world projects that solve
+            meaningful problems.
           </p>
 
-          <div className="flex justify-center md:block">
-            <Navigation />
-          </div>
+          <p className="text-lg text-gray-400 leading-relaxed">
+            With a solid foundation in modern frontend technologies and a focus
+            on usability and performance, I aim to deliver exceptional digital
+            experiences that resonate with users.
+          </p>
         </div>
-      </motion.div>
+      </motion.section>
     </div>
   );
 }

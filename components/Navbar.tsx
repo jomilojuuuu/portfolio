@@ -3,25 +3,13 @@
 import { motion } from "framer-motion";
 import { SocialIcon } from "react-social-icons";
 import dynamic from "next/dynamic";
-import { AlignRight } from "lucide-react";
 import React from "react";
 import Contact from "../components/Contact";
-import { X } from "lucide-react";
-
-// 👉 Dynamically import Modal
 const Modal = dynamic(() => import("./Modal"), { ssr: false });
-
 import type { ModalHandle } from "./Modal";
-import Link from "next/link";
 
-function Header() {
+function Navbar() {
   const modalRef = React.useRef<ModalHandle | null>(null);
-
-  const [isOpen, setIsOpen] = React.useState(false);
-
-  const handelClick = () => {
-    setIsOpen(!isOpen);
-  };
 
   return (
     <header className="sticky top-0 p-5 flex items-start justify-between max-w-7xl mx-auto z-20 xl:items-center bg-inherit">
@@ -69,52 +57,9 @@ function Header() {
               Get In Touch
             </p>
           </button>
-          <div>
-            <AlignRight onClick={handelClick} className="lg:hidden" />
-            {isOpen && (
-              <div className="fixed top-0 right-0 h-full w-[300px] bg-gray-900 text-white z-50 shadow-lg p-6">
-                <button onClick={handelClick} className="self-end mt-5">
-                  <X className="h-7 w-7 text-gray-400" />
-                </button>
-                <div className="flex flex-col text-3xl items-center mt-30">
-                  <Link
-                    href="/"
-                    className="block mb-2 text-gray-300 hover:text-white"
-                  >
-                    Home
-                  </Link>
-                  <Link
-                    href="/about"
-                    className="block mb-2 text-gray-300 hover:text-white my-10"
-                  >
-                    About
-                  </Link>
-                  <Link
-                    href="/skills"
-                    className="block mb-2 text-gray-300 hover:text-white my-10"
-                  >
-                    Skills
-                  </Link>
-                  <Link
-                    href="/projects"
-                    className="block mb-2 text-gray-300 hover:text-white my-10"
-                  >
-                    Projects
-                  </Link>
-                  <Link
-                    href="/contact"
-                    className="block mb-2 text-gray-300 hover:text-white my-10"
-                  >
-                    Contact
-                  </Link>
-                </div>
-              </div>
-            )}
-          </div>
         </div>
       </motion.div>
 
-      {/* Dynamically loaded modal */}
       <Modal ref={modalRef}>
         <Contact />
       </Modal>
@@ -122,4 +67,4 @@ function Header() {
   );
 }
 
-export default Header;
+export default Navbar;

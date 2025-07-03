@@ -3,7 +3,7 @@ import Link from 'next/link';
 
 function Github() {
   return (
-    <div className='my-6'>
+    <div className=''>
       <Link
         href="https://github.com/jomilojuuuu"
         className="relative w-[160px] h-[48px] group text-center px-6 py-3 font-bold"

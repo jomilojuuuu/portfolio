@@ -37,7 +37,7 @@ function Skills() {
     <div>
       <Header />
       <motion.div className="flex flex-col h-screen text-center lg:text-left lg:-mt-40 lg:flex-row px-5 justify-evenly items-center -mt-15">
-        <div className="space-y-5 lg:space-y-8 py-20 lg:px-10 md:w-[60%] lg:w-64 lg:h-95 xl:w-[600px] xl:h-[400px] -mt-[50px] lg:-mt-11">
+        <div className="space-y-5 lg:space-y-8 py-20 lg:px-10 md:w-[60%] lg:w-64 lg:h-95 xl:w-[600px] xl:h-[400px] -mt-[20px] lg:-mt-25">
           <h4 className="text-3xl lg:text-5xl font-semibold text-gray-400 lg:mt-20 lg:w-[90%]">
             I work mostly with
             <span className="text-white"> Frontend Technologies</span>
@@ -59,7 +59,7 @@ function Skills() {
           transition={{ duration: 1.2 }}
           whileInView={{ x: 0, opacity: 1 }}
           viewport={{ once: true }}
-          className="-mt-[230px] grid grid-cols-2 gap-3 md:grid-cols-3 lg:grid-cols-2 lg:gap-5 py-20 lg:mt-[5px]"
+          className="-mt-[120px] grid grid-cols-2 gap-3 md:grid-cols-3 lg:grid-cols-2 lg:gap-5 py-20 lg:mt-[5px]"
         >
           {skills.map((skill, i) => (
             <Card key={i} name={skill.name} image={skill.image} />
