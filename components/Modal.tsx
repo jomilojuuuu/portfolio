@@ -16,7 +16,7 @@ const Modal = React.forwardRef<ModalHandle, Props>(
   ({ children, className, overlayClassName }, ref) => {
     const [isOpen, setIsOpen] = React.useState<boolean>(false);
 
-    const handleModalOpen = () => {
+    const handleModalOpen = () => { 
       setIsOpen(true);
     };
 
@@ -41,12 +41,10 @@ const Modal = React.forwardRef<ModalHandle, Props>(
       <ReactModal
         isOpen={isOpen}
         shouldCloseOnEsc={true}
-        shouldCloseOnOverlayClick={true}
-        onAfterOpen={() => console.log("Modal opened")}
+        shouldCloseOnOverlayClick={true}       
         onRequestClose={() => {
           setIsOpen(false);
         }}
-        onAfterClose={() => console.log("Modal don close")}
         overlayClassName={[
           "bg-black/50 fixed inset-0 z-50 flex items-center justify-center",
           overlayClassName,

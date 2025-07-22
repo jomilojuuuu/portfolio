@@ -56,7 +56,7 @@ function Hero() {
           opacity: 0,
           scale: 0.5,
         }}
-        animate={{
+        animate={{  
           y: 0,
           opacity: 1,
           scale: 1,

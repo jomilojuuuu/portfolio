@@ -13,7 +13,7 @@ export default function About() {
         initial={{ opacity: 0 }}
         whileInView={{ opacity: 1 }}
         transition={{ duration: 1.2 }}
-        className="max-w-6xl mx-auto px-6 py-16 flex flex-col md:flex-row items-center gap-10"
+        className="max-w-6xl mx-auto px-6 py- flex flex-col md:flex-row items-center gap-10"
       >
         <motion.img
           initial={{ x: -100, opacity: 0 }}
