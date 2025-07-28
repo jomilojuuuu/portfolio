@@ -25,10 +25,10 @@ function Hero() {
         height={"150"}
       />
       <div className="z-20">
-        <h2 className="text-sm uppercase text-[#3B3C36] pb-2 tracking-[15px]">
+        <h2 className="text-sm uppercase text-[#3B3C36] p-2 tracking-[15px]">
           Frontend Developer
         </h2>
-        <h1 className="text-5xl lg:text-6xl font-semibold px-10">
+        <h1 className="text-2xl lg:text-5xl font-semibold px-10">
           <span className="mr-3 text-xl md:text-2xl text-[#3B3C36]">
             {text}
           </span>
@@ -64,7 +64,7 @@ function Hero() {
         transition={{
           duration: 1.5,
         }}
-        className="absolute bottom-4"
+        className="absolute bottom-4 snap-end snap"
       >
         <h2 className="text-sm md:text-xl text-[#3B3C36]">
           welcome to my page

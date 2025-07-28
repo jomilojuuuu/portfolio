@@ -29,7 +29,7 @@ function page() {
               <span className="text-[#555555]"> GitHub page,</span> where you can
               also find other
               <span className="text-[#555555]"> miscellaneous creations </span>I
-              have worked on.
+              have worked on and like.
             </p>
             <Github />
           </div>
