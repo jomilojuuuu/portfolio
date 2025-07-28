@@ -66,7 +66,7 @@ function Hero() {
         }}
         className="bottom-4 snap-end snap"
       >
-        <h2 className="text-sm mt-5 md:text-xl text-[#3B3C36]">
+        <h2 className="text-sm md:text-xl text-[#3B3C36]">
           welcome to my page
         </h2>
       </motion.div>
