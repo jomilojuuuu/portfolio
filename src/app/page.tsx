@@ -12,7 +12,7 @@ function Home() {
         <meta name="description" content="My portfolio website showcasing my work and skills." />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <div className="bg-[#D3D3D3] text-white h-screen snap-y snap-mandatory overflow-scroll z-0 overflow-x-hidden">
+      <div className="bg-[#D3D3D3] text-white h-screen snap-y  overflow-scroll z-0 overflow-x-hidden">
         {/* Header  */}
         <Navbar />
         {/* hero */}
