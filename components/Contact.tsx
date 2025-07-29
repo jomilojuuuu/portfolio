@@ -15,7 +15,7 @@ function Contact() {
     window.location.href = `mailto:jomilojuforlife2004@gmaii?subject=${formData.subject}&body=Hi My Name is ${formData.name}. ${formData.message}`;
   };
   return (
-    <div className="h-screen relative flex flex-col md:text-left md:flex-row -my-[60px] justify-evenly md:mx-auto items-center">
+    <div className="h-[700px] relative flex flex-col md:text-left md:flex-row -my-[60px] justify-evenly md:mx-auto items-center">
 
       <h3 className="absolute top-20 uppercase tracking-[20px] text-center text-gray-500 text-3xl">
         contact
