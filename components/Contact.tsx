@@ -1,4 +1,4 @@
-'use client';
+"use client";
 
 import React from "react";
 import { useForm, SubmitHandler } from "react-hook-form";
@@ -15,13 +15,14 @@ function Contact() {
     window.location.href = `mailto:jomilojuforlife2004@gmaii?subject=${formData.subject}&body=Hi My Name is ${formData.name}. ${formData.message}`;
   };
   return (
-    <div className="h-screen relative flex flex-col md:text-left md:flex-row max-w-7xl px-10 justify-evenly mx-auto items-center">
-      <h3 className="absolute top-24 uppercase tracking-[20px] text-gray-500 text-2xl">
+    <div className="h-screen relative flex flex-col md:text-left md:flex-row-my-[60px] justify-evenly md:mx-auto items-center">
+
+      <h3 className="absolute top-10 uppercase tracking-[20px] text-gray-500 text-3xl">
         contact
       </h3>
-
+      
       <div className="flex flex-col space-y-5">
-        <h4 className="text-4xl md:text-5xl font-semibold text-center mt-16">
+        <h4 className="text-2xl md:text-5xl font-semibold text-center mt-16">
           Want to work with me?
           <span className="text-gray-500"> let’s Connect</span>
         </h4>
@@ -32,7 +33,7 @@ function Contact() {
       </div>
       <form
         onSubmit={handleSubmit(onSubmit)}
-        className="flex flex-col space-y-2 w-fit mx-auto"
+        className="flex flex-col space-y-2 w-fit mx-auto -mt-10"
       >
         <div className="flex space-x-2">
           <input
@@ -48,7 +49,6 @@ function Contact() {
             type="email"
           />
         </div>
-
         <input
           {...register("subject")}
           placeholder="Subject"
