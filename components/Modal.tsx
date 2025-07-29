@@ -55,10 +55,10 @@ const Modal = React.forwardRef<ModalHandle, Props>(
         ].join(" ")}
       >
         <div className="flex flex-col overflow-y-hidden overflow-x-hidden">
-          <button onClick={handleModalClose} title="Close" className="self-end">
-            <div className="relative">
-              <div className="w-5 h-0.5 bg-black rounded-full rotate-45 absolute"></div>
-              <div className="w-5 h-0.5 bg-black rounded-full -rotate-45 absolute"></div>
+          <button onClick={handleModalClose} title="Close" className="self-end cursor-pointer">
+            <div className="">
+              <div className="w-5 h-0.5 bg-white rounded-full rotate-45 absolute"></div>
+              <div className="w-5 h-0.5 bg-white rounded-full -rotate-45 absolute"></div>
             </div>
           </button>
           {children}
