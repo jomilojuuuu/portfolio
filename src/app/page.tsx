@@ -8,7 +8,7 @@ function Home() {
   return (
     <>
       <Head>
-        <title>My Portfolio</title>
+        <title>Oke.Jomiloju</title>
         <meta name="description" content="My portfolio website showcasing my work and skills." />
         <link rel="icon" href="/favicon.ico" />
       </Head>

@@ -1,52 +1,46 @@
 import React from "react";
-import { SocialIcon } from "react-social-icons";
 import Image from "next/image";
 
 type Props = {
   name: string;
   image: string;
   description: string;
-  tools: string;
+  tools: string[];
+  liveUrl?: string;
 };
 
-function Work({ name, image, description, tools }: Props) {
+function Work({ name, image, description, tools, liveUrl }: Props) {
   return (
-    <div className="w-[350px] md:w-[350px] lg:w-[300px] bg-[#555555] rounded shadow-lg h-[380px] md:h-[400px] mx-auto mt-10">
-      <div className="w-full h-48 relative rounded-t-lg overflow-hidden">
+    <div className="w-[350px] md:w-[350px] lg:w-[300px] bg-[#555555] rounded shadow-lg mt-10">
+      {/* Image */}
+      <div className="relative rounded-t-lg overflow-hidden">
         <Image
-          alt={name}
           src={image}
-          layout="fill"
-          objectFit="cover"
-          className="rounded-t-lg"
+          alt={name}
+          width={300}
+          height={100}
+          className="object-cover rounded-t-lg w-full"
+          style={{ pointerEvents: "none" }} // ensures image does not block clicks
         />
       </div>
 
+      {/* Content */}
       <div className="p-5">
-        <h2 className="font-[500] text-[18px] leading-[22.97px] mt-[12px] text-white ">
-          {name}
-        </h2>
-        <p className="text-gray text-[14px] leading-[20.42px] text-gray-300 pt-2 pb-2">
-          {description}
-        </p>
-        <p className="mt-[1px] text-white ">{tools}</p>
-        <div className="mt-[4px] flex gap-[30px]">
-          <span className="text-white flex justify-center items-center cursor-pointer gap-[8px] text-black2 text-[14px] hover:opacity-75  hover:scale-110 transition-all duration-500">
-            <SocialIcon
-              fgColor="white"
-              bgColor="transparent"
-              url="https://github.com/jomilojuuuu"
-            />
-            <a className="text-gray-300" href="">
-              Code
-            </a>
-          </span>
-          <span className="text-white flex justify-center items-center cursor-pointer gap-[8px] text-black2 text-[14px] hover:opacity-75  hover:scale-110 transition-all duration-500">
-            <a className="text-gray-300" href="">
-              View Site
-            </a>
-          </span>
-        </div>
+        <h2 className="font-bold text-[18px] mt-1 text-white">{name}</h2>
+        <p className="text-gray-300 pt-2 pb-2">{description}</p>
+        <p className="mt-1 text-white text-lg">{tools?.join(", ")}</p>
+
+        {/* View Site Link */}
+        {liveUrl && (
+          <a
+            href={liveUrl}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-block mt-4 px-4 py-2 bg-[#444444] text-gray-300 hover:bg-[#555555] hover:text-white rounded transition-all duration-300"
+          >
+            View Site
+          </a>
+        )}
       </div>
     </div>
   );

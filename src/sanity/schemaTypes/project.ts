@@ -7,6 +7,7 @@ const project = {
       { name: "description", title: "Description", type: "text" },
       { name: "image", title: "Image", type: "image" },
       { name: "url", title: "Live Site URL", type: "url" },
+      { name: "tools", title: "Tools used", type: "array", of: [{ type: "string" }] },
     ],
   };
   

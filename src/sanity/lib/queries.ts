@@ -6,8 +6,8 @@ export async function getProjects() {
     _id,
     title,
     description,
-    liveUrl,
-    repoUrl,
+    tools,
+    "liveUrl": url,
     "imageUrl": image.asset->url
   }`;
   return await client.fetch(query);

@@ -1,20 +1,26 @@
-export const apiVersion =
-  process.env.NEXT_PUBLIC_SANITY_API_VERSION || '2025-07-01'
+function getEnvValue(key: string, fallback?: string): string {
+  // Next.js injects NEXT_PUBLIC_* envs at build time into process.env.*
+  const value =
+    (typeof process !== "undefined" && process.env?.[key]) ||
+    (typeof import.meta !== "undefined" && import.meta.env?.[key]);
 
-export const dataset = assertValue(
-  process.env.NEXT_PUBLIC_SANITY_DATASET,
-  'Missing environment variable: NEXT_PUBLIC_SANITY_DATASET'
-)
+  if (value) return value;
 
-export const projectId = assertValue(
-  process.env.NEXT_PUBLIC_SANITY_PROJECT_ID,
-  'Missing environment variable: NEXT_PUBLIC_SANITY_PROJECT_ID'
-)
-
-function assertValue<T>(v: T | undefined, errorMessage: string): T {
-  if (v === undefined) {
-    throw new Error(errorMessage)
+  if (fallback !== undefined) {
+    if (process.env.NODE_ENV === "development") {
+      console.warn(`⚠️ Missing env var ${key}, using fallback: ${fallback}`);
+    }
+    return fallback;
   }
 
-  return v
+  // In dev, show a warning instead of crashing the client
+  if (process.env.NODE_ENV === "development") {
+    console.warn(`⚠️ Missing environment variable: ${key}`);
+  }
+
+  return ""; // return empty string instead of throwing on client
 }
+
+export const apiVersion = getEnvValue("NEXT_PUBLIC_SANITY_API_VERSION", "2025-07-01");
+export const dataset = getEnvValue("NEXT_PUBLIC_SANITY_DATASET", "production");
+export const projectId = getEnvValue("NEXT_PUBLIC_SANITY_PROJECT_ID", "j14w2zrd");

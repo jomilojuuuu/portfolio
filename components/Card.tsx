@@ -1,10 +1,9 @@
 import React from "react";
 import Image from "next/image";
-import { urlFor } from "@/sanity/lib/image";
 
 type Props = {
   name: string;
-  image?: string;
+  image?: string; // just a URL string now
 };
 
 function Card({ name, image }: Props) {
@@ -15,7 +14,7 @@ function Card({ name, image }: Props) {
           <span className="w-[35px] h-[35px] relative">
             <Image
               alt={`${name} logo`}
-              src={urlFor(image).url()}
+              src={image} // 👈 already a valid URL string
               className="mx-auto mt-2"
               width={30}
               height={30}
