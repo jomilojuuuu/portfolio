@@ -4,7 +4,7 @@ const skill = {
     type: "document",
     fields: [
       { name: "name", title: "Skill Name", type: "string" },
-      { name: "icon", title: "Skill Icon", type: "image" },
+      { name: "image", title: "Skill Image", type: "image" },
     ],
   };
   

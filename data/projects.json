@@ -1,9 +1,0 @@
-[
-    {
-        "name": "Reddit",
-        "image": "/reddit-image",
-        "description": "play free music",
-        "appUsed": "NextJs + Tailwind + TypeScript"
-    }
-  
-]

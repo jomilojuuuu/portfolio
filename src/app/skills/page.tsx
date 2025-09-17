@@ -7,13 +7,10 @@ import Card from "../../../components/Card";
 import { getSkills } from "@/sanity/lib/queries";
 import VerticalSidebar from "../../../components/VerticalSidebar";
 import Resume from "../../../components/Resume";
-import { urlFor } from "@/sanity/lib/image"; // 👈 import urlFor
-
 type Skill = {
   name: string;
-  image: import("@sanity/image-url/lib/types/types").SanityImageSource; // use SanityImageSource type
+  imageUrl?: string;
 };
-
 function Skills() {
   const [skills, setSkills] = useState<Skill[]>([]);
 
@@ -61,28 +58,11 @@ function Skills() {
           className="-mt-[120px] grid grid-cols-2 gap-3 md:grid-cols-3 lg:grid-cols-2 lg:gap-5 py-20 lg:mt-[5px]"
         >
           {skills.map((skill, i) => {
-            if (skill.image) {
-              try {
-                // imageUrl is not used, so just validate image processing
-                urlFor(skill.image).width(100).height(100).url();
-              } catch (e) {
-                console.warn(
-                  "Could not build image URL for skill:",
-                  skill.name,
-                  e
-                );
-              }
-            }
-
             return (
               <Card
                 key={i}
                 name={skill.name}
-                image={
-                  skill.image
-                    ? urlFor(skill.image).width(30).height(30).url()
-                    : "/placeholder.png"
-                }
+                image={skill.imageUrl || "/placeholder.png"}
               />
             );
           })}
